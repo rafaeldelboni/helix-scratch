@@ -18,36 +18,25 @@ To you use this template you need to have installed `deps-new` in your workflow.
 clojure -Ttools install io.github.seancorfield/deps-new '{:git/tag "v0.4.13"}' :as new
 ```
 
-### Optimal installation
-This is just a personal preference, but I preffer install tools adding the following
-as `:alias` into your local `~/.clojure/deps.edn` file:
+### Wrap installation
+I've created an [wrap](https://github.com/rafaeldelboni/deps-new-wrap) over deps-new to simplify some new commands you can use this wrapper
+by tools adding the following as `:alias` into your local `~/.clojure/deps.edn` file:
 ```clojure
-:new {:extra-deps {io.github.seancorfield/deps-new
-                   {:git/url "https://github.com/seancorfield/deps-new"
-                    :git/sha "21bb2c8e9b898f6b93506cd128314585a98cc962"}}
-      :exec-fn org.corfield.new/create
-      :exec-args {:template "app"}}
+:new {:extra-deps {cc.delboni/deps-new-wrap
+                   {:git/url "https://github.com/rafaeldelboni/deps-new-wrap"
+                    :git/sha "aecc4565b917153d66485a62980df67616d600be"}}
+      :exec-fn cc.delboni.main/new}
 ```
 
 ## Usage
 
 ### Git Remote
 ```bash
-  # traditional install
+  # traditional
   clojure -Sdeps '{:deps {rafaeldelboni/helix-scratch {:git/url "https://github.com/rafaeldelboni/helix-scratch" :git/sha "3e46840584a95be58f52ac7c0675fdd99fae2537"}}}' -Tnew create :template rafaeldelboni/helix-scratch :name myusername/mynewproject
 
-  # optimal install
-  clojure -Sdeps '{:deps {rafaeldelboni/helix-scratch {:git/url "https://github.com/rafaeldelboni/helix-scratch" :git/sha "3e46840584a95be58f52ac7c0675fdd99fae2537"}}}' -X:new :template rafaeldelboni/helix-scratch :name myusername/mycoolsite
-```
-
-### Local
-Clone this repo, navigate into it's folder and then run:
-```bash
-  # traditional install
-  clojure -Sdeps '{:deps {rafaeldelboni/helix-scratch {:local/root "."}}}' -Tnew create :template rafaeldelboni/helix-scratch :name myusername/mycoollib
-
-  # optimal install
-  clojure -Sdeps '{:deps {rafaeldelboni/helix-scratch {:local/root "./"}}}' -X:new :template rafaeldelboni/helix-scratch :name myusername/mycoolsite
+  # wrap
+  clojure -X:new :gh rafaeldelboni/helix-scratch :name myusername/mycoolsite
 ```
 
 # Contributing
