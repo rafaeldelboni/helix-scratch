@@ -24,7 +24,7 @@ by tools adding the following as `:alias` into your local `~/.clojure/deps.edn` 
 ```clojure
 :new {:extra-deps {cc.delboni/deps-new-wrap
                    {:git/url "https://github.com/rafaeldelboni/deps-new-wrap"
-                    :git/sha "aecc4565b917153d66485a62980df67616d600be"}}
+                    :git/sha "0b55afe1cd72732a5329e0d2215726c8e8d9e80e"}}
       :exec-fn cc.delboni.main/new}
 ```
 
