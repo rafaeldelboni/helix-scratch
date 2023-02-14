@@ -5,7 +5,7 @@ Minimal Helix Scratch Template.
 # TL;DR
 To use this template:
 ```bash
-  clojure -Sdeps '{:deps {rafaeldelboni/helix-scratch {:git/url "https://github.com/rafaeldelboni/helix-scratch" :git/sha "8e4eb30" :git/tag "v0.1.1"}}}' -X:new :template rafaeldelboni/helix-scratch :name myusername/mycoolsite
+  clojure -Sdeps '{:deps {rafaeldelboni/helix-scratch {:git/url "https://github.com/rafaeldelboni/helix-scratch" :git/sha "3e46840584a95be58f52ac7c0675fdd99fae2537"}}}' -X:new :template rafaeldelboni/helix-scratch :name myusername/mycoolsite
 ```
 
 # Requirements
@@ -34,10 +34,10 @@ as `:alias` into your local `~/.clojure/deps.edn` file:
 ### Git Remote
 ```bash
   # traditional install
-  clojure -Sdeps '{:deps {rafaeldelboni/helix-scratch {:git/url "https://github.com/rafaeldelboni/helix-scratch" :git/sha "8e4eb30" :git/tag "v0.1.1"}}}' -Tnew create :template rafaeldelboni/helix-scratch :name myusername/mynewproject
+  clojure -Sdeps '{:deps {rafaeldelboni/helix-scratch {:git/url "https://github.com/rafaeldelboni/helix-scratch" :git/sha "3e46840584a95be58f52ac7c0675fdd99fae2537"}}}' -Tnew create :template rafaeldelboni/helix-scratch :name myusername/mynewproject
 
   # optimal install
-  clojure -Sdeps '{:deps {rafaeldelboni/helix-scratch {:git/url "https://github.com/rafaeldelboni/helix-scratch" :git/sha "8e4eb30" :git/tag "v0.1.1"}}}' -X:new :template rafaeldelboni/helix-scratch :name myusername/mycoolsite
+  clojure -Sdeps '{:deps {rafaeldelboni/helix-scratch {:git/url "https://github.com/rafaeldelboni/helix-scratch" :git/sha "3e46840584a95be58f52ac7c0675fdd99fae2537"}}}' -X:new :template rafaeldelboni/helix-scratch :name myusername/mycoolsite
 ```
 
 ### Local
