@@ -1,8 +1,9 @@
 node_modules/
-public/js
-public/css
+resources/public/js
+resources/public/css
+resources/tests
 
-/target
+/out
 /checkouts
 /src/gen
 
