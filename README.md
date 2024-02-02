@@ -5,7 +5,7 @@ Minimal Helix Scratch Template.
 # TL;DR
 To use this template:
 ```bash
-  clojure -Sdeps '{:deps {rafaeldelboni/helix-scratch {:git/url "https://github.com/rafaeldelboni/helix-scratch" :git/sha "1757721a7115cbc23c64c1ad9c6c3bc008837235"}}}' -X:new :template rafaeldelboni/helix-scratch :name myusername/mycoolsite
+  clojure -Sdeps '{:deps {rafaeldelboni/helix-scratch {:git/url "https://github.com/rafaeldelboni/helix-scratch" :git/sha "89ddb49109526b355822ef3dec72e37f26e37a05"}}}' -X:new :template rafaeldelboni/helix-scratch :name myusername/mycoolsite
 ```
 
 # Requirements
@@ -33,7 +33,7 @@ by tools adding the following as `:alias` into your local `~/.clojure/deps.edn` 
 ### Git Remote
 ```bash
   # traditional
-  clojure -Sdeps '{:deps {rafaeldelboni/helix-scratch {:git/url "https://github.com/rafaeldelboni/helix-scratch" :git/sha "1757721a7115cbc23c64c1ad9c6c3bc008837235"}}}' -Tnew create :template rafaeldelboni/helix-scratch :name myusername/mynewproject
+  clojure -Sdeps '{:deps {rafaeldelboni/helix-scratch {:git/url "https://github.com/rafaeldelboni/helix-scratch" :git/sha "89ddb49109526b355822ef3dec72e37f26e37a05"}}}' -Tnew create :template rafaeldelboni/helix-scratch :name myusername/mynewproject
 
   # wrap
   clojure -X:new :gh rafaeldelboni/helix-scratch :name myusername/mycoolsite
