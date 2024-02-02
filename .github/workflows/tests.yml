@@ -37,5 +37,5 @@ jobs:
     - run: |
         clojure -Sdeps '{:aliases {:new2 {:extra-deps {io.github.seancorfield/deps-new {:git/tag "v0.7.0" :git/sha "58f2c19"}} :exec-fn org.corfield.new/create}} :deps {rafaeldelboni/helix-scratch {:local/root "."}}}' -Xnew2 :template rafaeldelboni/helix-scratch :name my.test/webapp
         cd webapp
-        npm ci
+        npm install
         npm run test
