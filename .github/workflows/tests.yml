@@ -1,0 +1,41 @@
+name: Tests
+
+on:
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+
+  tests-karma:
+    strategy:
+      matrix:
+        os-version: [ubuntu-latest]
+        node-version: [18.x]
+    runs-on: ${{ matrix.os-version }}
+
+    steps:
+    - name: Clone Repo
+      uses: actions/checkout@v4.1.1
+
+    - name: Prepare java
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'adopt'
+        java-version: '11'
+
+    - name: Install clojure cli
+      uses: DeLaGuardo/setup-clojure@master
+      with:
+        cli: 1.11.1.1435
+
+    - name: Run karma tests in the generated template ${{ matrix.node-version }}
+      uses: actions/setup-node@v4.0.1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: |
+        clojure -Sdeps '{:aliases {:new2 {:extra-deps {io.github.seancorfield/deps-new {:git/tag "v0.7.0" :git/sha "58f2c19"}} :exec-fn org.corfield.new/create}} :deps {rafaeldelboni/helix-scratch {:local/root "."}}}' -Xnew2 :template rafaeldelboni/helix-scratch :name my.test/webapp
+        cd webapp
+        npm install
+        npm run test

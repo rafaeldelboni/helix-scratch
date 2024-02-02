@@ -1,6 +1,6 @@
-(ns main.lib
+(ns {{top/ns}}.{{main/ns}}.infra.helix
   #?(:clj (:require [helix.core :as helix]))
-  #?(:cljs (:require-macros [main.lib])))
+  #?(:cljs (:require-macros [{{top/ns}}.{{main/ns}}.infra.helix])))
 
 #?(:clj
    (defmacro defnc [type params & body]

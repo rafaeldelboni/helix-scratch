@@ -1,10 +1,9 @@
-(ns main.app
-  (:require
-   ["react-dom/client" :as rdom]
-   [helix.core :refer [$]]
-   [helix.dom :as d]
-   [helix.hooks :as hooks]
-   [main.lib :refer [defnc]]))
+(ns {{top/ns}}.{{main/ns}}.app
+  (:require ["react-dom/client" :as rdom]
+            [helix.core :refer [$]]
+            [helix.dom :as d]
+            [helix.hooks :as hooks]
+            [{{top/ns}}.{{main/ns}}.infra.helix :refer [defnc]]))
 
 ;; app
 (defnc app []

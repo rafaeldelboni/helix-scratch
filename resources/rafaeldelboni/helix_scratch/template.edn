@@ -2,4 +2,7 @@
  ;; this does not transform the data but does print a message:
  :data-fn rafaeldelboni.helix-scratch/data-fn
  ;; this does not transform the EDN but does print a message:
- :template-fn rafaeldelboni.helix-scratch/template-fn}
+ :template-fn rafaeldelboni.helix-scratch/template-fn
+
+ :transform [["src" "src/{{top/file}}/{{main/file}}"]
+             ["test" "test/{{top/file}}/{{main/file}}"]]}
