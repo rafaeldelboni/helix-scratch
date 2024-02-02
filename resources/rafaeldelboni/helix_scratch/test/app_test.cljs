@@ -1,4 +1,4 @@
-(ns main.app-test
+(ns {{top/ns}}.{{main/ns}}.app-test
   (:require [clojure.test :refer [deftest is]]))
 
 (deftest dummy-test

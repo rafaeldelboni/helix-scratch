@@ -1,4 +1,4 @@
-(ns dev.refresh
+(ns {{top/ns}}.{{main/ns}}.dev.refresh
   "A place to add preloads for developer tools!"
   (:require [helix.experimental.refresh :as r]))
 
