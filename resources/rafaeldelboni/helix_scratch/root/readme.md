@@ -3,11 +3,13 @@
 
 ## Commands
 
-### Watch Dev/Tests
-Build the developer build and start shadow-cljs watching and serving main in [`localhost:8000`](http://localhost:8000) and tests in [`localhost:8100`](http://localhost:8100)
+### Watch
+Start shadow-cljs watching and serving app and tests
 ```bash
 npm start
 ```
+> Main App available at http://localhost:5000  
+> Tests available at http://localhost:5001  
 
 ### CI Tests
 Run **Karma** tests targeted for running CI tests with *Headless Chromium Driver*
