@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "watch:css": "sass --load-path=node_modules --watch src/{{top/file}}/{{main/file}}/css/base.scss:public/css/base.min.css",
+    "watch:css": "sass --load-path=node_modules --watch src/{{top/file}}/{{main/file}}/css/base.scss:resources/public/css/base.min.css",
     "watch:clj": "shadow-cljs watch app tests",
-    "css:release": "sass --load-path=node_modules src/{{top/file}}/{{main/file}}/css/base.scss:public/css/base.min.css --style=compressed",
+    "css:release": "sass --load-path=node_modules src/{{top/file}}/{{main/file}}/css/base.scss:resources/public/css/base.min.css --style=compressed",
     "clj:release": "shadow-cljs release app",
     "test": "shadow-cljs compile ci-tests && karma start --single-run",
     "start": "conc npm:watch:*",
