@@ -3,25 +3,30 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "watch:css": "sass --load-path=node_modules --watch src/{{top/file}}/{{main/file}}/css/base.scss:resources/public/css/base.min.css",
+    "watch:css": "postcss src/{{top/file}}/{{main/file}}/css/app.css -w --dir resources/public/css --verbose",
     "watch:clj": "shadow-cljs watch app tests",
-    "release:css": "sass --load-path=node_modules src/{{top/file}}/{{main/file}}/css/base.scss:resources/public/css/base.min.css --style=compressed",
+    "release:css": "postcss src/{{top/file}}/{{main/file}}/css/app.css --dir resources/public/css",
     "release:clj": "shadow-cljs release app",
     "test": "shadow-cljs compile ci-tests && karma start --single-run",
     "start": "conc npm:watch:*",
     "release": "conc npm:release:*"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-refresh": "^0.14.0"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-refresh": "^0.14.2"
   },
   "devDependencies": {
     "concurrently": "^8.2.2",
-    "karma": "^6.4.2",
+    "cssnano": "^6.1.2",
+    "karma": "^6.4.4",
     "karma-chrome-launcher": "^3.2.0",
     "karma-cljs-test": "^0.1.0",
-    "sass": "^1.57.1",
-    "shadow-cljs": "^2.27.1"
+    "postcss": "^8.4.40",
+    "postcss-cli": "^11.0.0",
+    "postcss-import": "^16.1.0",
+    "postcss-preset-mantine": "^1.17.0",
+    "postcss-simple-vars": "^7.0.1",
+    "shadow-cljs": "^2.28.11"
   }
 }
