@@ -41,7 +41,7 @@ by tools adding the following as `:alias` into your local `~/.clojure/deps.edn` 
 
 # License
 
-Copyright © 2023 Rafael Delboni
+Copyright © 2024 Rafael Delboni
 
 This is free and unencumbered software released into the public domain.
 For more information, please refer to http://unlicense.org

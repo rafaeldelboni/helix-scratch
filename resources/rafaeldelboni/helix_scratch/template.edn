@@ -4,5 +4,6 @@
  ;; this does not transform the EDN but does print a message:
  :template-fn rafaeldelboni.helix-scratch/template-fn
 
- :transform [["src" "src/{{top/file}}/{{main/file}}"]
+ :transform [["dev" "dev/{{top/file}}/{{main/file}}/dev"]
+             ["src" "src/{{top/file}}/{{main/file}}"]
              ["test" "test/{{top/file}}/{{main/file}}"]]}
